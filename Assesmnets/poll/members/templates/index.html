@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poll Index</title>
+</head>
+<body>
+    <h1>Poll Index</h1>
+    <ul>
+        {% for poll in latest_polls %}
+            <li><a href="{% url 'detail' poll.id %}">{{ poll.question }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

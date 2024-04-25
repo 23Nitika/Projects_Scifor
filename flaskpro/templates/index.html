@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header> 
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+    <main> 
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! My name is <span class="name">Nitika Goyal</span>. I am a Python Developer who loves to code the solution out. Very enthusiastic and fast learner. I have high acumen which I wish to use for the betterment of your company.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>I have created various projects using Python and Django.</p>
+            <ul>
+                <li><a href="https://github.com/23Nitika">Projects</a></li>
+            </ul>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-box">
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>Python</p>
+                <p>Django</p>
+                <p>Data Structures and Algorithms (DSA)</p>
+                <p>Flask</p>
+                <p>REST API</p>
+                <p>FastAPI</p>
+                <p>Git</p>
+                <p>Machine Learning</p>
+                <p>VS Code</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can contact me via email: <a href="mailto:nitikagoyal178@gmail.com">nitikagoyal178@gmail.com</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nitika Goyal</p>
+    </footer>
+</body>
+</html>

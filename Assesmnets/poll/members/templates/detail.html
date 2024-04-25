@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Detail</title>
+</head>
+<body>
+    <h1>Poll Detail</h1>
+    <h2>{{ poll.question }}</h2>
+    <ul>
+        {% for choice in poll.choice_set.all %}
+            <li>{{ choice.choice_text }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{% url 'vote' poll.id %}" method="post">
+        {% csrf_token %}
+        {% for choice in poll.choice_set.all %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+        {% endfor %}
+        <button type="submit">Vote</button>
+    </form>
+    
+    <a href="{% url 'index' %}"><button>Back to Poll Index</button></a>
+    <a href="{% url 'vote_counts' poll.id %}"><button>Show Vote Counts</button></a>
+
+</body>
+</html>
